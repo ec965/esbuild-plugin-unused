@@ -5,5 +5,5 @@ build({
   entryPoints: ["example/index.js"],
   bundle: true,
   outfile: "dist/out.js",
-  plugins: [unused({ srcDirectory: "./example" })],
+  plugins: [unused({ src: "./example/**/*" })],
 }).catch(() => process.exit(1));

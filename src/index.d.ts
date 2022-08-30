@@ -1,5 +1,5 @@
 export interface Options {
-  srcDirectory?: string;
+  src?: string | string[];
 }
 
 export default function plugin(opts: Options): import("esbuild").Plugin;

@@ -4,19 +4,19 @@
  * @returns {import('esbuild').Plugin}
  */
 function plugin(opts) {
-  const { srcDirectory = "src/" } = opts;
+  const { src = "src/**/*" } = opts;
   return {
     name: "unused",
     async setup(build) {
       const path = require("path");
       const fg = require("fast-glob");
 
-      let globbed = await fg(srcDirectory);
+      let globbed = await fg(src);
       let resolvedFiles = globbed.map((file) => path.resolve(file));
       const files = new Set(resolvedFiles);
 
       build.onResolve({ filter: /.*/ }, async (args) => {
-        files.delete(args.path);
+        files.delete(path.resolve(args.path));
       });
 
       build.onEnd(() => {
