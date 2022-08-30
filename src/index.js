@@ -10,7 +10,7 @@ function plugin(opts) {
     async setup(build) {
       const path = require("path");
       const fg = require("fast-glob");
-      const {default: chalk}= await import('chalk');
+      const { default: chalk } = await import("chalk");
 
       let globbed = await fg(src);
       let resolvedFiles = globbed.map((file) => path.resolve(file));
