@@ -1,0 +1,29 @@
+{
+  "name": "esbuild-plugin-unused",
+  "files": [
+    "src/*"
+  ],
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./build.js"
+  },
+  "keywords": [
+    "esbuild",
+    "plugin",
+    "unused"
+  ],
+  "author": {
+    "name": "Enoch Chau",
+    "url": "https://enochchau.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "esbuild": "^0.15.5",
+    "typescript": "^4.8.2"
+  },
+  "dependencies": {
+    "fast-glob": "^3.2.11"
+  }
+}
