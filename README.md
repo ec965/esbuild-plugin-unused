@@ -34,14 +34,14 @@ require("esbuild").build({
 On build completion, you will get some console output telling you which files in your project are unused.
 
 ```sh
-~/code/esbuild-plugin-unused ❯ pnpm build
+~/project ❯ pnpm build
 
-> esbuild-plugin-unused@1.0.0 test /user/esbuild-plugin-unused
+> project@1.0.0 build /user/project
 > node ./build.js
 
 Found 2 Unused Files
-- /user/esbuild-plugin-unused/example/unused.js
-- /user/esbuild-plugin-unused/example/lib/unused.js
+- /user/project/src/unused.js
+- /user/project/src/lib/unused.js
 ```
 
 ### Options
