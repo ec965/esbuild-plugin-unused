@@ -44,6 +44,8 @@ Found 2 Unused Files
 - /user/project/src/lib/unused.js
 ```
 
+This plugin works by finding files that were not used during the `onLoad` build step.
+
 ### Options
 
 ```typescript
@@ -52,7 +54,7 @@ export interface Options {
   // defaults to src/**/*
   src?: string | string[];
   // Regular expression to filter files on.
-  // defaults to `/.*\.(m|c)?(j|t)sx?$/`
+  // defaults to `/.*\.(m|c)?(j|t)sx?$/` which should match all JavaScript and TypeScript file extensions
   filter?: RegExp;
 }
 ```
