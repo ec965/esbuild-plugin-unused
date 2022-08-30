@@ -3,4 +3,6 @@ export interface Options {
   filter?: RegExp;
 }
 
-export default function plugin(opts?: Options): import("esbuild").Plugin;
+function plugin(opts?: Options): import("esbuild").Plugin;
+
+export default plugin;
