@@ -1,10 +1,10 @@
 /**
  * Esbuild Plugin Unused
- * @param {import("./index").Options} opts
+ * @param {import("./index").Options?} opts
  * @returns {import('esbuild').Plugin}
  */
-function plugin(opts) {
-  const { src = "src/**/*", filter = /.*\.(j|t)sx?$/ } = opts;
+function plugin(opts = {}) {
+  const { src = "src/**/*", filter = /.*\.(m|c)?(j|t)sx?$/ } = opts;
   return {
     name: "unused",
     async setup(build) {
